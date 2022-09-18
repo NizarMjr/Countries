@@ -1,0 +1,25 @@
+.header {
+    margin: 0 auto;
+    height: 4.5rem;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .title {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: black;
+}
+
+.header .color-mode {
+    cursor: pointer;
+}
+
+@media (max-width:772px) {
+    .header {
+        flex-direction: column;
+    }
+}
