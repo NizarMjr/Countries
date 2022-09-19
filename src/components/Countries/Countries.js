@@ -68,7 +68,7 @@ const Countries = (props) => {
                         return (
                             <Link onClick={(e) => { getCountryDetails(item) }} to="/details" className="country" key={index} style={{ backgroundColor: colors.backgrnd, color: colors.color, boxShadow: colors.backgrnd === '#2b3743' ? 'none' : '' }}>
                                 <div className="image">
-                                    <img src={item.flags.png} />
+                                    <img src={item.flags.png} alt="flag" />
                                 </div>
                                 <div className="country-info">
                                     <h2 className="name">{item.name.common}</h2>

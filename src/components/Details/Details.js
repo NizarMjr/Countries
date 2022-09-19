@@ -17,7 +17,7 @@ const Details = (props) => {
             </div>
             <div className="details-country">
                 <div className="flag">
-                    <img src={border.flags.png} />
+                    <img src={border.flags.png} alt="flag" />
                 </div>
                 <div className="details">
                     <div className="content-country">
