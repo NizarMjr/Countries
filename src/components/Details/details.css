@@ -82,6 +82,10 @@
         flex-basis: 300px;
     }
 
+    .content-country .part {
+        flex-basis: 150px;
+    }
+
 }
 
 @media (min-width:882px) {
@@ -99,10 +103,6 @@
 @media (max-width:882px) {
     .content-country {
         flex-direction: column;
-    }
-
-    .content-country .part {
-        margin-bottom: 1rem;
     }
 
     .borders {

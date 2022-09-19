@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-import app from './app.css'
 import Countries from "./components/Countries/Countries";
 import Details from "./components/Details/Details";
 import Header from "./components/Header/Header";
