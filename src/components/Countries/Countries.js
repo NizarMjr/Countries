@@ -5,6 +5,7 @@ import axios from "axios";
 import { Route, Routes, BrowserRouter, Router } from "react-router";
 import { Link } from "react-router-dom";
 import Details from "../Details/Details";
+import { DebounceInput } from 'react-debounce-input';
 
 const Countries = (props) => {
     const URL = 'https://restcountries.com/v3.1/all';
@@ -46,7 +47,7 @@ const Countries = (props) => {
                 <div className="filter-part">
                     <div className="search">
                         <i className="icon-search"><FiSearch /></i>
-                        <input type="text" placeholder="Search for country..." ref={inputValue} onChange={(e) => { inputValue.current = e.target.value; fetchSearch() }} style={{
+                        <DebounceInput minLength={1} debounceTimeout={0} type="text" placeholder="Search for country..." ref={inputValue} onChange={(e) => { inputValue.current = e.target.value; fetchSearch() }} style={{
                             backgroundColor: colors.backgrnd === '#fff' ? '#fff' : '#2b3743', color: colors.color === 'black' ? 'black' : '#fff'
                         }} />
                     </div>
