@@ -12,12 +12,15 @@ const Countries = (props) => {
     const { colors, getCountryDetails } = props;
     const [data, setData] = useState([]);
     const [fetch, setFetch] = useState([]);
-    const wait = useRef();
+    const [wait, setWait] = useState('block');
     const region = useRef();
     const inputValue = useRef();
 
     useEffect(() => {
         axios.get(URL).then((res) => { setData(res.data); setFetch(res.data) });
+        setTimeout(() => {
+            setWait('none');
+        }, 7000);
     }, [])
 
     const fetchRegion = () => {
@@ -60,9 +63,8 @@ const Countries = (props) => {
                     </div>
                 </div>
                 <div className="country-part">
-                    <div className="wait" ref={wait} style={{ display: wait.current }}>Wait Loading...</div>
+                    <div className="wait" style={{ display: wait }}>Wait Until All Countries Appear...</div>
                     {fetch.map((item, index) => {
-                        wait.current = 'none'
                         return (
                             <Link onClick={(e) => { getCountryDetails(item) }} to="/details" className="country" key={index} style={{ backgroundColor: colors.backgrnd, color: colors.color, boxShadow: colors.backgrnd === '#2b3743' ? 'none' : '' }}>
                                 <div className="image">
