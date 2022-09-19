@@ -62,7 +62,7 @@ const Countries = (props) => {
                 <div className="country-part">
                     <div className="wait" ref={wait} style={{ display: wait.current }}>Wait Loading...</div>
                     {fetch.map((item, index) => {
-                        if (index === fetch.length - 10) wait.current = 'none'
+                        wait.current = 'none'
                         return (
                             <Link onClick={(e) => { getCountryDetails(item) }} to="/details" className="country" key={index} style={{ backgroundColor: colors.backgrnd, color: colors.color, boxShadow: colors.backgrnd === '#2b3743' ? 'none' : '' }}>
                                 <div className="image">
