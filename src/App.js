@@ -27,7 +27,7 @@ function App() {
       <BrowserRouter>
         <Header changeColor={changeColor} />
         <Routes>
-          <Route path="/" exact element={<Countries colors={colors} getCountryDetails={getCountryDetails} />}></Route>
+          <Route path="/Countries/" exact element={<Countries colors={colors} getCountryDetails={getCountryDetails} />}></Route>
           <Route path='/details' exact element={<Details country={JSON.parse(localStorage.getItem('country'))} colors={colors} />}></Route>
         </Routes>
       </BrowserRouter>

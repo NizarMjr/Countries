@@ -13,7 +13,7 @@ const Details = (props) => {
     return (
         <>
             <div className="back">
-                <Link to="/"><button style={{ backgroundColor: colors.backgrnd === '#fff' ? '#fff' : '#2b3743', color: colors.color === 'black' ? 'black' : '#fff' }}>Back</button></Link>
+                <Link to="/Countries/"><button style={{ backgroundColor: colors.backgrnd === '#fff' ? '#fff' : '#2b3743', color: colors.color === 'black' ? 'black' : '#fff' }}>Back</button></Link>
             </div>
             <div className="details-country">
                 <div className="flag">

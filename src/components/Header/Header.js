@@ -14,7 +14,7 @@ const Header = (props) => {
     }
     return (
         <header className="header" style={{ backgroundColor: background, color: color }}>
-            <Link to="/" className="title" style={{ color: color }}>Where in the world?</Link>
+            <Link to="/Countries/" className="title" style={{ color: color }}>Where in the world?</Link>
             <div className="color-mode" onClick={() => setColor()}>
                 <MdDarkMode /> Dark mode
             </div>
